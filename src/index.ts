@@ -2,7 +2,7 @@ import 'express-async-errors';
 import dotenv from 'dotenv';
 import * as mongoose from 'mongoose';
 import * as Sentry from '@sentry/node';
-import * as Tracing from '@sentry/tracing';
+import { nodeProfilingIntegration } from '@sentry/profiling-node';
 
 dotenv.config();
 
@@ -21,9 +21,11 @@ if (process.env.ENV && process.env.SENTRY_DSN) {
     release: `lovely-english-server@${process.env.PACKAGE_VERSION?.replace(/"/g, '')}`,
     integrations: [
       new Sentry.Integrations.Http({ tracing: true }),
-      new Tracing.Integrations.Express({ app }),
+      new Sentry.Integrations.Express({ app }),
+      nodeProfilingIntegration(),
     ],
     tracesSampleRate: 1.0,
+    profilesSampleRate: 1.0,
   });
 
   app.use(Sentry.Handlers.requestHandler());
@@ -65,7 +67,7 @@ mongoose
     app.listen(port, () => {
       logger.log({
         level: 'info',
-        message: `Radium Learning server listening on port ${port}`,
+        message: `Lovely English server listening on port ${port}`,
         label: 'server',
       });
     });

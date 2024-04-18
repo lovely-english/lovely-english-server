@@ -635,7 +635,7 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mongodb-js/saslprep@^1.1.0":
+"@mongodb-js/saslprep@^1.1.0", "@mongodb-js/saslprep@^1.1.5":
   version "1.1.5"
   resolved "https://registry.npmjs.org/@mongodb-js/saslprep/-/saslprep-1.1.5.tgz"
   integrity sha512-XLNOMH66KhJzUJNwT/qlMnS4WsNDWD5ASdyaSH3EtK+F4r/CFGa3jT4GNi4mfOitGvWXtdLgQJkQjxSVrio+jA==
@@ -668,51 +668,52 @@
   resolved "https://registry.npmjs.org/@pkgr/core/-/core-0.1.1.tgz"
   integrity sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==
 
-"@sentry-internal/tracing@7.109.0":
-  version "7.109.0"
-  resolved "https://registry.yarnpkg.com/@sentry-internal/tracing/-/tracing-7.109.0.tgz#3effaa132c41a65378fa98146aea61228d528953"
-  integrity sha512-PzK/joC5tCuh2R/PRh+7dp+uuZl7pTsBIjPhVZHMTtb9+ls65WkdZJ1/uKXPouyz8NOo9Xok7aEvEo9seongyw==
+"@sentry-internal/tracing@7.110.1":
+  version "7.110.1"
+  resolved "https://registry.yarnpkg.com/@sentry-internal/tracing/-/tracing-7.110.1.tgz#3bf55dca9e963144b0a4ad9a0b96aa2a759e2470"
+  integrity sha512-4kTd6EM0OP1SVWl2yLn3KIwlCpld1lyhNDeR8G1aKLm1PN+kVsR6YB/jy9KPPp4Q3lN3W9EkTSES3qhP4jVffQ==
   dependencies:
-    "@sentry/core" "7.109.0"
-    "@sentry/types" "7.109.0"
-    "@sentry/utils" "7.109.0"
+    "@sentry/core" "7.110.1"
+    "@sentry/types" "7.110.1"
+    "@sentry/utils" "7.110.1"
 
-"@sentry/core@7.109.0":
-  version "7.109.0"
-  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-7.109.0.tgz#7a02f4af4a676950f6555f552a2a232d4458fcd5"
-  integrity sha512-xwD4U0IlvvlE/x/g/W1I8b4Cfb16SsCMmiEuBf6XxvAa3OfWBxKoqLifb3GyrbxMC4LbIIZCN/SvLlnGJPgszA==
+"@sentry/core@7.110.1":
+  version "7.110.1"
+  resolved "https://registry.yarnpkg.com/@sentry/core/-/core-7.110.1.tgz#0d9fd932478c4cb1f6330143ddf69dacee27bf4d"
+  integrity sha512-yC1yeUFQlmHj9u/KxKmwOMVanBmgfX+4MZnZU31QPqN95adyZTwpaYFZl4fH5kDVnz7wXJI0qRP8SxuMePtqhw==
   dependencies:
-    "@sentry/types" "7.109.0"
-    "@sentry/utils" "7.109.0"
+    "@sentry/types" "7.110.1"
+    "@sentry/utils" "7.110.1"
 
-"@sentry/node@^7.109.0":
-  version "7.109.0"
-  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-7.109.0.tgz#dbf152212e42a9b1648ff758ec5bffcb6bb0fa49"
-  integrity sha512-tqMNAES4X/iBl1eZRCmc29p//0id01FBLEiesNo5nk6ECl6/SaGMFAEwu1gsn90h/Bjgr04slwFOS4cR45V2PQ==
+"@sentry/node@^7.110.1":
+  version "7.110.1"
+  resolved "https://registry.yarnpkg.com/@sentry/node/-/node-7.110.1.tgz#aef3664f6b86cab64444b732d53d445e4c173bbf"
+  integrity sha512-n6sNzZJ/ChfyCI1FxuGWgloeevC8j2vax3vXM4IZrSIm5hS1d9L2oCJ4HEPuxGUxCkQ1f4kXPcdmNaQsWH0JBw==
   dependencies:
-    "@sentry-internal/tracing" "7.109.0"
-    "@sentry/core" "7.109.0"
-    "@sentry/types" "7.109.0"
-    "@sentry/utils" "7.109.0"
+    "@sentry-internal/tracing" "7.110.1"
+    "@sentry/core" "7.110.1"
+    "@sentry/types" "7.110.1"
+    "@sentry/utils" "7.110.1"
 
-"@sentry/tracing@^7.109.0":
-  version "7.109.0"
-  resolved "https://registry.yarnpkg.com/@sentry/tracing/-/tracing-7.109.0.tgz#65bbad85c12c5dffd910a721f320817254f92049"
-  integrity sha512-lgveekdd/XLgQ6oZLvcRGUWBIOAZ7QwbjLHEd8zzeKubHbIwFzMkhIejskqLi2z2OwzrYl5q+Zo1jS1z9f62YQ==
+"@sentry/profiling-node@^7.110.1":
+  version "7.110.1"
+  resolved "https://registry.yarnpkg.com/@sentry/profiling-node/-/profiling-node-7.110.1.tgz#b1e7eaeb6823c57e028448ff21dfce739fde1e48"
+  integrity sha512-htqOzb/IPyC27LSAhWy/9J1fqNZNPhgDSXxPyHNo4aWHPpimDIEClues04KGWNNXH2GRe5ttwavX2PHUQG+dwQ==
   dependencies:
-    "@sentry-internal/tracing" "7.109.0"
+    detect-libc "^2.0.2"
+    node-abi "^3.52.0"
 
-"@sentry/types@7.109.0":
-  version "7.109.0"
-  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-7.109.0.tgz#d8778358114ed05be734661cc9e1e261f4494947"
-  integrity sha512-egCBnDv3YpVFoNzRLdP0soVrxVLCQ+rovREKJ1sw3rA2/MFH9WJ+DZZexsX89yeAFzy1IFsCp7/dEqudusml6g==
+"@sentry/types@7.110.1":
+  version "7.110.1"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-7.110.1.tgz#0b84c0d5e075dbd80afa2ce6a486fd14680a0024"
+  integrity sha512-sZxOpM5gfyxvJeWVvNpHnxERTnlqcozjqNcIv29SZ6wonlkekmxDyJ3uCuPv85VO54WLyA4uzskPKnNFHacI8A==
 
-"@sentry/utils@7.109.0":
-  version "7.109.0"
-  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-7.109.0.tgz#7078e1400197abc1b0c436679bef980639500a86"
-  integrity sha512-3RjxMOLMBwZ5VSiH84+o/3NY2An4Zldjz0EbfEQNRY9yffRiCPJSQiCJID8EoylCFOh/PAhPimBhqbtWJxX6iw==
+"@sentry/utils@7.110.1":
+  version "7.110.1"
+  resolved "https://registry.yarnpkg.com/@sentry/utils/-/utils-7.110.1.tgz#39d78734b807a959cacd42477711f85aaa02ca6e"
+  integrity sha512-eibLo2m1a7sHkOHxYYmRujr3D7ek2l9sv26F1SLoQBVDF7Afw5AKyzPmtA1D+4M9P/ux1okj7cGj3SaBrVpxXA==
   dependencies:
-    "@sentry/types" "7.109.0"
+    "@sentry/types" "7.110.1"
 
 "@sideway/address@^4.1.5":
   version "4.1.5"
@@ -1433,6 +1434,11 @@ bson@^6.2.0:
   resolved "https://registry.npmjs.org/bson/-/bson-6.5.0.tgz"
   integrity sha512-DXf1BTAS8vKyR90BO4x5v3rKVarmkdkzwOrnYDFdjAY694ILNDkmA3uRh1xXJEl+C1DAh8XCvAQ+Gh3kzubtpg==
 
+bson@^6.4.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-6.6.0.tgz#f225137eb49fe19bee4d87949a0515c05176e2ad"
+  integrity sha512-BVINv2SgcMjL4oYbBuCQTpE3/VKOSxrOA8Cj/wQP7izSzlBGVomdm+TcUd0Pzy0ytLSSDweCKQ6X3f5veM5LQA==
+
 buffer-from@^1.0.0:
   version "1.1.2"
   resolved "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz"
@@ -1767,6 +1773,11 @@ destroy@1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz"
   integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
+
+detect-libc@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-2.0.3.tgz#f0cd503b40f9939b894697d19ad50895e30cf700"
+  integrity sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==
 
 detect-newline@^3.0.0:
   version "3.1.0"
@@ -3548,6 +3559,15 @@ mongodb@6.3.0:
     bson "^6.2.0"
     mongodb-connection-string-url "^3.0.0"
 
+mongodb@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-6.5.0.tgz#3735b4fba085b26ca06f7744e9639bc538e93d87"
+  integrity sha512-Fozq68InT+JKABGLqctgtb8P56pRrJFkbhW0ux+x1mdHeyinor8oNzJqwLjV/t5X5nJGfTlluxfyMnOXNggIUA==
+  dependencies:
+    "@mongodb-js/saslprep" "^1.1.5"
+    bson "^6.4.0"
+    mongodb-connection-string-url "^3.0.0"
+
 mongoose@*, mongoose@^8.2.3:
   version "8.2.3"
   resolved "https://registry.npmjs.org/mongoose/-/mongoose-8.2.3.tgz"
@@ -3597,6 +3617,13 @@ negotiator@0.6.3:
   version "0.6.3"
   resolved "https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
+
+node-abi@^3.52.0:
+  version "3.57.0"
+  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.57.0.tgz#d772cb899236c0aa46778d0d25256917cf15eb15"
+  integrity sha512-Dp+A9JWxRaKuHP35H77I4kCKesDy5HUDEmScia2FyncMTOXASMyg251F5PhFoDA5uqBrDDffiLpbqnrZmNXW+g==
+  dependencies:
+    semver "^7.3.5"
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -4069,7 +4096,7 @@ semver@^6.1.0, semver@^6.3.0, semver@^6.3.1:
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.3.8, semver@^7.5.3, semver@^7.5.4:
+semver@^7.3.5, semver@^7.3.8, semver@^7.5.3, semver@^7.5.4:
   version "7.6.0"
   resolved "https://registry.npmjs.org/semver/-/semver-7.6.0.tgz"
   integrity sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==

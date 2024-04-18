@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsc",
     "prepublish": "npm run build",
-    "start": "PACKAGE_VERSION=$(npm pkg get version) nodemon",
+    "start": "nodemon",
     "lint": "eslint \"./**/*.{ts,test.ts}\"",
     "format": "prettier --write './**/*.{ts,test.ts}' --config ./.prettierrc",
     "lint:fix": "eslint --fix && yarn format",
@@ -21,13 +21,14 @@
     "node": "18.x"
   },
   "dependencies": {
-    "@sentry/node": "^7.109.0",
-    "@sentry/tracing": "^7.109.0",
+    "@sentry/node": "^7.110.1",
+    "@sentry/profiling-node": "^7.110.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.1",
     "express-async-errors": "^3.1.1",
     "joi": "^17.12.3",
+    "mongodb": "^6.5.0",
     "mongoose": "^8.2.3",
     "typescript": "^5.4.3",
     "winston": "^3.13.0"

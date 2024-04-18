@@ -1,9 +1,11 @@
-import express from 'express';
-
-import globalValidations from 'src/middlewares/validations';
-
-const router = express.Router();
-
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const router = express_1.default.Router();
+// router.get('/test', )
 // router.get('/', firebaseValidations.superAdmin, controllers.getAllUsers);
 // router.post('/manual', validations.userManualValidation, controllers.createManual);
 // router.put(
@@ -25,5 +27,4 @@ const router = express.Router();
 //   globalValidations.validateMongoId,
 //   controllers.physicalDeleteById,
 // );
-
-export default router;
+exports.default = router;
