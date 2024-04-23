@@ -28,3 +28,4 @@ yarn-error.log*
 .env.staging
 .env.qa
 .env.production
+.vercel
