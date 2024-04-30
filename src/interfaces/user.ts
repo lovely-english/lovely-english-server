@@ -1,0 +1,21 @@
+import mongoose from 'mongoose';
+
+export type Role = 'ADMIN' | 'TUTOR' | 'STUDENT';
+
+export interface User {
+  firebaseUid: string;
+  firtsName: string;
+  lastName: string;
+  dni: string;
+  adress: string;
+  email: string;
+  password: string;
+  phone: string;
+  isActive: boolean;
+  role: Role;
+  profileImage: string;
+}
+
+export interface UserModel extends User {
+  _id?: mongoose.Types.ObjectId;
+}

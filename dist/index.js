@@ -31,7 +31,7 @@ require("express-async-errors");
 const dotenv_1 = __importDefault(require("dotenv"));
 const mongoose = __importStar(require("mongoose"));
 const Sentry = __importStar(require("@sentry/node"));
-const Tracing = __importStar(require("@sentry/tracing"));
+const profiling_node_1 = require("@sentry/profiling-node");
 dotenv_1.default.config();
 const app_1 = __importDefault(require("./app"));
 const logger_1 = __importDefault(require("./config/logger"));
@@ -45,9 +45,11 @@ if (process.env.ENV && process.env.SENTRY_DSN) {
         release: `lovely-english-server@${(_a = process.env.PACKAGE_VERSION) === null || _a === void 0 ? void 0 : _a.replace(/"/g, '')}`,
         integrations: [
             new Sentry.Integrations.Http({ tracing: true }),
-            new Tracing.Integrations.Express({ app: app_1.default }),
+            new Sentry.Integrations.Express({ app: app_1.default }),
+            (0, profiling_node_1.nodeProfilingIntegration)(),
         ],
         tracesSampleRate: 1.0,
+        profilesSampleRate: 1.0,
     });
     app_1.default.use(Sentry.Handlers.requestHandler());
     app_1.default.use(Sentry.Handlers.tracingHandler());
@@ -83,7 +85,7 @@ mongoose
     app_1.default.listen(port, () => {
         logger_1.default.log({
             level: 'info',
-            message: `Radium Learning server listening on port ${port}`,
+            message: `Lovely English server listening on port ${port}`,
             label: 'server',
         });
     });
