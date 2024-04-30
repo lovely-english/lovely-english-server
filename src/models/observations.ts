@@ -1,25 +1,8 @@
 import mongoose, { Model, Schema } from 'mongoose';
+import { ObservationModel } from 'src/interfaces/observations';
 
-export interface ObservationType {
-  _id?: mongoose.Types.ObjectId;
-  title: string;
-  description: string;
-  type: string;
-  author: string; //TO DO: We will replace this by userInterface
-  date: Date;
-  users: string[]; //TO DO: We will replaace this by userInterface []
-}
-
-export interface UserDocument extends ObservationType, Document {
-  _id?: mongoose.Types.ObjectId;
-}
-
-const observationSchema = new Schema<ObservationType, Model<ObservationType>>(
+const observationSchema = new Schema<ObservationModel, Model<ObservationModel>>(
   {
-    _id: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
       required: true,
@@ -32,23 +15,24 @@ const observationSchema = new Schema<ObservationType, Model<ObservationType>>(
       type: String,
       required: true,
     },
-    //   author: {
-    //     type: Schema.Types.ObjectId,
-    //     required: true,
-    //     ref: 'User',
-    //     unique: false,
-    //   },
     author: {
-      type: String,
+      type: Schema.Types.ObjectId,
       required: true,
+      ref: 'User',
     },
     date: {
       type: Date,
       required: true,
     },
-    users: [{ 
-      type: String, 
-      required: true }],
+    users: [
+      {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'User',
+      },
+    ],
   },
   { timestamps: true },
 );
+
+export default mongoose.model<ObservationModel>('Observation', observationSchema)
