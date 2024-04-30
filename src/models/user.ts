@@ -19,7 +19,7 @@ const userSchema = new Schema<UserModel, Model<UserModel>>(
       type: String,
       required: true,
     },
-    adress: {
+    address: {
       type: String,
       required: true,
     },

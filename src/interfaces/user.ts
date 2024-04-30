@@ -7,7 +7,7 @@ export interface User {
   firtsName: string;
   lastName: string;
   dni: string;
-  adress: string;
+  address: string;
   email: string;
   password: string;
   phone: string;
