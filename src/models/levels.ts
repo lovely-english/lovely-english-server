@@ -15,10 +15,13 @@ const leveslSchema = new Schema<Levels, Model<Levels>>({
     type: String,
     required: true,
   },
-  themes: {
-    type: String,
-    required: true,
-  },
+  themes: [
+    {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'Themes',
+    },
+  ],
   isActive: {
     type: Boolean,
     required: true,

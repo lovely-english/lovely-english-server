@@ -11,10 +11,13 @@ const themesSchema = new Schema<Themes, Model<Themes>>({
     type: String,
     required: true,
   },
-  content: {
-    type: String,
-    required: true,
-  },
+  content: [
+    {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'Content',
+    },
+  ],
   enableUsers: {
     type: String,
     required: true,

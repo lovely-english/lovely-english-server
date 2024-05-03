@@ -23,10 +23,13 @@ const contentSchema = new Schema<Content, Model<Content>>({
     type: Date,
     required: true,
   },
-  files: {
-    type: String,
-    required: true,
-  },
+  files: [
+    {
+      type: Schema.Types.ObjectId,
+      required: true,
+      ref: 'Files',
+    },
+  ],
   isActivity: {
     type: Boolean,
     required: true,
