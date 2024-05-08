@@ -1,47 +1,37 @@
-name: Tests
+name: Continuous Integration
 
 on:
-  workflow_call:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  tests:
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18]
-    steps:
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
 
-      - name: Cache node modules
-        id: cache-nodemodules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          node-version: '18'
 
       - name: Install dependencies
-        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-        run: yarn install
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Lint
+        run: yarn lint
 
       - name: Type check
         run: yarn type-check
 
-      - name: Type check seeders
-        run: yarn type-check-seeders
-
-      - name: Check linting
-        run: yarn lint
-
-      - name: Unit tests
+      - name: Run unit tests
         run: yarn test
