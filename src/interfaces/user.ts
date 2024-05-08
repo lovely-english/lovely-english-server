@@ -4,7 +4,7 @@ export type Role = 'ADMIN' | 'TUTOR' | 'STUDENT';
 
 export interface User {
   firebaseUid: string;
-  firtsName: string;
+  firstName: string;
   lastName: string;
   dni: string;
   address: string;
